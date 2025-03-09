@@ -191,6 +191,9 @@ export default function DataTable(props: {
       if (sortModel.length > 0) {
         params.append("_sort", sortModel[0]?.field);
         params.append("_order", sortModel[0]?.sort || "asc");
+      }else{
+        params.append("_sort", "time");
+        params.append("_order", "desc");
       }
 
       if (search && search.length > 0) {

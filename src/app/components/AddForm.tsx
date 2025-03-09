@@ -137,6 +137,7 @@ export default function AddForm(props: any) {
       regions: formData.regions.split(","), // Convert "region1, region2" -> ["region1", "region2"]
       id,
       unlocs: [id],
+      time: new Date().toISOString(),
     };
     console.log("Formatted Data:", formattedData);
 

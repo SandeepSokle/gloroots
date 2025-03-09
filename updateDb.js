@@ -17,6 +17,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
   // Create an array to hold the values with ids
   const ports = Object.entries(jsonData).map(([key, value]) => ({
     id: key,
+    time: new Date().toISOString(),
     ...value
   }));
 
